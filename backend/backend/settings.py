@@ -39,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
-    'athenaeum',
-    'CryptoApp'
+    'athenaeum'
 ]
 
 MIDDLEWARE = [
