@@ -12,7 +12,7 @@ Currently, to get everything up and running:
 * To run the frontend:
    * Navigate to the frontend directory
    * Run `npm ci`
-   * Run `start`
+   * Run `npm start`
    * Navigate to http://localhost:3000
    * To leave, hit CTRL+C and then Y
 
