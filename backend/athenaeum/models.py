@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 
 # Create your models here.
@@ -5,7 +6,9 @@ from django.db import models
 class Book(models.Model):
     title = models.CharField(max_length=120)
     authors = models.CharField(max_length=120)
-    description = models.TextField(default='')
+    description = models.TextField(default='', blank=True)
+    price = models.FloatField(default = 0.00, blank=True)
+    linkToBuy = models.URLField(blank=True)
     isInStock = models.BooleanField(default=False)
 
     def __str__(self):

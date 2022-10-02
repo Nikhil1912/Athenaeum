@@ -14,6 +14,8 @@ class App extends Component {
         title: "",
         authors: "",
         description: "",
+        price: 0.00,
+        linkToBuy: "",
         isInStock: false,
       },
     };
