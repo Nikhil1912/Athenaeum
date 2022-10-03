@@ -140,7 +140,7 @@ class App extends Component {
     return (
       <main className="container">
         <SearchBar placeholder = "Enter a book name..." data ={BookData}/>
-        <h1 className="text-white text-uppercase text-center my-4">Book app</h1>
+        <h1 className="text-uppercase text-center my-4">Athenaeum</h1>
         <div className="row">
           <div className="col-md-6 col-sm-10 mx-auto p-0">
             <div className="card p-3">
