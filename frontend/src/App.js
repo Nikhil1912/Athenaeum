@@ -13,7 +13,9 @@ class App extends Component {
       activeItem: {
         title: "",
         authors: "",
+        ispn: "",
         description: "",
+        condition: "",
         price: 0.00,
         linkToBuy: "",
         isInStock: false,

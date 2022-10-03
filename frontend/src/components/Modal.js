@@ -62,6 +62,17 @@ export default class CustomModal extends Component {
               />
             </FormGroup>
             <FormGroup>
+              <Label for="book-ispn">ISPN</Label>
+              <Input
+                type="text"
+                id="book-ispn"
+                name="ispn"
+                value={this.state.activeItem.ispn}
+                onChange={this.handleChange}
+                placeholder="Enter book ISPN"
+              />
+            </FormGroup>
+            <FormGroup>
               <Label for="book-description">Description</Label>
               <Input
                 type="text"
@@ -70,6 +81,17 @@ export default class CustomModal extends Component {
                 value={this.state.activeItem.description}
                 onChange={this.handleChange}
                 placeholder="Enter Book description"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="book-condition">Condition</Label>
+              <Input
+                type="text"
+                id="book-condition"
+                name="condition"
+                value={this.state.activeItem.condition}
+                onChange={this.handleChange}
+                placeholder="Enter book condition"
               />
             </FormGroup>
             <FormGroup>

@@ -6,7 +6,9 @@ from django.db import models
 class Book(models.Model):
     title = models.CharField(max_length=120)
     authors = models.CharField(max_length=120)
+    ispn = models.TextField(default='', max_length=13, blank=True)
     description = models.TextField(default='', blank=True)
+    condition = models.TextField(default='', blank=True)
     price = models.FloatField(default = 0.00, blank=True)
     linkToBuy = models.URLField(blank=True)
     isInStock = models.BooleanField(default=False)
