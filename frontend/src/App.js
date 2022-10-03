@@ -63,7 +63,7 @@ class App extends Component {
   };
 
   createItem = () => {
-    const item = { title: "", authors: "", description: "", isInStock: false };
+    const item = { title: "", authors: "", ispn: "", description: "", condition: "", price: "", linkToBuy: "", isInStock: false };
 
     this.setState({ activeItem: item, modal: !this.state.modal });
   };
