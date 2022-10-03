@@ -4,7 +4,7 @@
 Athenaeum is an application dedicated to connecting you with the textbooks you're searching for. We search the web far and wide to find textbooks, along with their distributors and prices. Using Athenaeum, you can simplify your journey and minimize your costs as you find the resources you need for class.
 
 Currently, to get everything up and running:
-* Install dependencies. You may also need to install django-corse-headers and djangorestframework. Node.js includes npm (v. 8.15.0), which is also required.
+* Install dependencies. Node.js includes npm (v. 8.15.0), which is also required.
    * The easiest way to do this: navigate to \Athenaeum and run `pip install -r requirements.txt`
 * To run the backend:
    * Navigate to the backend directory
