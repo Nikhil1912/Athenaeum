@@ -51,7 +51,7 @@ export default class CustomModal extends Component {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="book-authors">Title</Label>
+              <Label for="book-authors">Authors</Label>
               <Input
                 type="text"
                 id="book-authors"
@@ -70,6 +70,28 @@ export default class CustomModal extends Component {
                 value={this.state.activeItem.description}
                 onChange={this.handleChange}
                 placeholder="Enter Book description"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="book-price">Price</Label>
+              <Input
+                type="float"
+                id="book-price"
+                name="price"
+                value={this.state.activeItem.price}
+                onChange={this.handleChange}
+                placeholder="Enter the listed price"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="book-link">Link to buy</Label>
+              <Input
+                type="url"
+                id="book-linkToBuy"
+                name="linkToBuy"
+                value={this.state.activeItem.linkToBuy}
+                onChange={this.handleChange}
+                placeholder="Enter a link to buy this book"
               />
             </FormGroup>
             <FormGroup check>
