@@ -2,6 +2,8 @@
 import React, { Component } from "react";
 import Modal from "./components/Modal";
 import axios from "axios";
+import SearchBar from "./components/SearchBar";
+import BookData from "./Data.json";
 
 class App extends Component {
   constructor(props) {
@@ -133,6 +135,7 @@ class App extends Component {
   render() {
     return (
       <main className="container">
+        <SearchBar placeholder = "Enter a book name..." data ={BookData}/>
         <h1 className="text-white text-uppercase text-center my-4">Book app</h1>
         <div className="row">
           <div className="col-md-6 col-sm-10 mx-auto p-0">
@@ -145,6 +148,7 @@ class App extends Component {
                   Add book
                 </button>
               </div>
+
               {this.renderTabList()}
               <ul className="list-group list-group-flush border-top-0">
                 {this.renderItems()}
@@ -152,6 +156,7 @@ class App extends Component {
             </div>
           </div>
         </div>
+        
         {this.state.modal ? (
           <Modal
             activeItem={this.state.activeItem}
@@ -160,6 +165,7 @@ class App extends Component {
           />
         ) : null}
       </main>
+      
     );
   }
 }
