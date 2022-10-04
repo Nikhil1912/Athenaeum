@@ -4,6 +4,7 @@ import Modal from "./components/Modal";
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
 import BookData from "./Data.json";
+import swal from 'sweetalert';
 
 class App extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class App extends Component {
       },
     };
   }
-
+  
   componentDidMount() {
     this.refreshList();
   }
@@ -80,6 +81,16 @@ class App extends Component {
     return this.setState({ viewisInStock: false });
   };
 
+  openExternalLink = (item) => {
+    if (item.linkToBuy.length > 0) {
+      var win = window.open(item.linkToBuy, '_blank');
+      win.focus();
+    }
+    else {
+      swal('There is no link associated with this book yet :(')  
+    }
+  }
+
   renderTabList = () => {
     return (
       <div className="nav nav-tabs">
@@ -120,11 +131,19 @@ class App extends Component {
         </span>
         <span>
           <button
+            className="btn btn-success mr-2"
+            onClick={() => this.openExternalLink(item)}
+          >
+            Buy
+          </button>          
+          &nbsp; 
+          <button
             className="btn btn-secondary mr-2"
             onClick={() => this.editItem(item)}
           >
             Edit
           </button>
+          &nbsp;
           <button
             className="btn btn-danger"
             onClick={() => this.handleDelete(item)}
