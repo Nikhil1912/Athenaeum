@@ -5,6 +5,7 @@ import axios from "axios";
 import SearchBar from "./components/SearchBar";
 import BookData from "./Data.json";
 import swal from 'sweetalert';
+import Badge from 'react-bootstrap/Badge';
 
 class App extends Component {
   constructor(props) {
@@ -81,6 +82,33 @@ class App extends Component {
     return this.setState({ viewisInStock: false });
   };
 
+  displayPrice = (item) => {
+    var priceString = '';
+    var badgeType = 'info';
+    if (item.condition.length > 0) {
+      priceString += item.condition + ': ';
+      if (item.condition === 'Good') {
+        badgeType = 'success';
+      }
+      else if (item.condition === 'Poor') {
+        badgeType = 'danger';
+      }
+      else {
+        badgeType = 'warning';
+      }
+    }
+    if (item.price === 0) {
+      badgeType = 'secondary';
+      priceString += 'Free';
+    }
+    else {
+      priceString += '$' + item.price.toFixed(2).toString();
+    }    
+    return (
+      <Badge pill bg={badgeType}>{priceString}</Badge>
+    );
+  }
+
   openExternalLink = (item) => {
     if (item.linkToBuy.length > 0) {
       var win = window.open(item.linkToBuy, '_blank');
@@ -128,6 +156,8 @@ class App extends Component {
           title={item.description}
         >
           {item.title} - {item.authors}
+          <br/>
+          {this.displayPrice(item)}{' '}          
         </span>
         <span>
           <button
