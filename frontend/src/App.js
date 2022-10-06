@@ -21,8 +21,8 @@ class App extends Component {
         description: "",
         condition: "",
         price: 0.00,
-        linkToBuy: "",
-        isInStock: false,
+        link_to_buy: "",
+        is_in_stock: false,
       },
     };
   }
@@ -65,7 +65,7 @@ class App extends Component {
   };
 
   createItem = () => {
-    const item = { title: "", authors: "", ispn: "", description: "", condition: "", price: "", linkToBuy: "", isInStock: false };
+    const item = { title: "", authors: "", ispn: "", description: "", condition: "", price: "", link_to_buy: "", is_in_stock: false };
 
     this.setState({ activeItem: item, modal: !this.state.modal });
   };
@@ -110,8 +110,8 @@ class App extends Component {
   }
 
   openExternalLink = (item) => {
-    if (item.linkToBuy.length > 0) {
-      var win = window.open(item.linkToBuy, '_blank');
+    if (item.link_to_buy.length > 0) {
+      var win = window.open(item.link_to_buy, '_blank');
       win.focus();
     }
     else {
@@ -141,7 +141,7 @@ class App extends Component {
   renderItems = () => {
     const { viewisInStock } = this.state;
     const newItems = this.state.bookList.filter(
-      (item) => item.isInStock === viewisInStock
+      (item) => item.is_in_stock === viewisInStock
     );
 
     return newItems.map((item) => (

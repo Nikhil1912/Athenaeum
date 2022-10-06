@@ -39,12 +39,12 @@ class BookTestCase(TestCase):
         field_label = testBook._meta.get_field('price').verbose_name
         self.assertEqual(field_label, 'price')
 
-    def test_book_linkToBuy_label(self):
+    def test_book_link_to_buy_label(self):
         testBook = Book.objects.get(id=1)
-        field_label = testBook._meta.get_field('linkToBuy').verbose_name
-        self.assertEqual(field_label, 'linkToBuy')
+        field_label = testBook._meta.get_field('link_to_buy').verbose_name
+        self.assertEqual(field_label, 'link to buy')
 
-    def test_book_isInStock_label(self):
+    def test_book_is_in_stock_label(self):
         testBook = Book.objects.get(id=1)
-        field_label = testBook._meta.get_field('isInStock').verbose_name
-        self.assertEqual(field_label, 'isInStock')
+        field_label = testBook._meta.get_field('is_in_stock').verbose_name
+        self.assertEqual(field_label, 'is in stock')
