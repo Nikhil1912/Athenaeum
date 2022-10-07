@@ -7,11 +7,11 @@ import BookData from "./Data.json";
 import swal from 'sweetalert';
 import Badge from 'react-bootstrap/Badge';
 
-class App extends Component {
+class App extends Component {  // Parent class for all of the Book data
   constructor(props) {
     super(props);
     this.state = {
-      viewisInStock: false,
+      viewisInStock: false,     // Variable maintaining availabilty status of books
       bookList: [],
       modal: false,
       activeItem: {
@@ -64,7 +64,7 @@ class App extends Component {
       .catch((err) => console.log(err));
   };
 
-  createItem = () => {
+  createItem = () => {     //Creates a new record
     const item = { title: "", authors: "", ispn: "", description: "", condition: "", price: "", link_to_buy: "", is_in_stock: false };
 
     this.setState({ activeItem: item, modal: !this.state.modal });
@@ -74,7 +74,7 @@ class App extends Component {
     this.setState({ activeItem: item, modal: !this.state.modal });
   };
 
-  displayisInStock = (status) => {
+  displayisInStock = (status) => {    //Function to manipulate availabilty of a book 
     if (status) {
       return this.setState({ viewisInStock: true });
     }
@@ -82,12 +82,12 @@ class App extends Component {
     return this.setState({ viewisInStock: false });
   };
 
-  displayPrice = (item) => {
+  displayPrice = (item) => {   //Function to display the condition and price of item
     var priceString = '';
     var badgeType = 'info';
     if (item.condition.length > 0) {
       priceString += item.condition + ': ';
-      if (item.condition === 'Good') {
+      if (item.condition === 'Good') {      //assign a badge type based on the condition 
         badgeType = 'success';
       }
       else if (item.condition === 'Poor') {
@@ -109,8 +109,8 @@ class App extends Component {
     );
   }
 
-  openExternalLink = (item) => {
-    if (item.link_to_buy.length > 0) {
+  openExternalLink = (item) => {        //Is called when item does not match any record,
+    if (item.link_to_buy.length > 0) {   //redirects to a link to buy the book at original cost
       var win = window.open(item.link_to_buy, '_blank');
       win.focus();
     }
