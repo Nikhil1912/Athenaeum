@@ -109,9 +109,9 @@ export default class CustomModal extends Component {
               <Label for="book-link">Link to buy</Label>
               <Input
                 type="url"
-                id="book-linkToBuy"
-                name="linkToBuy"
-                value={this.state.activeItem.linkToBuy}
+                id="book-link-to-buy"
+                name="link_to_buy"
+                value={this.state.activeItem.link_to_buy}
                 onChange={this.handleChange}
                 placeholder="Enter a link to buy this book"
               />
@@ -120,8 +120,9 @@ export default class CustomModal extends Component {
               <Label check>
                 <Input
                   type="checkbox"
-                  name="isInStock"
-                  checked={this.state.activeItem.isInStock}
+                  id="book-is-in-stock"
+                  name="is_in_stock"
+                  checked={this.state.activeItem.is_in_stock}
                   onChange={this.handleChange}
                 />
                 In Stock

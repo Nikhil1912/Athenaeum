@@ -4,6 +4,8 @@ import Modal from "./components/Modal";
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
 import BookData from "./Data.json";
+import swal from 'sweetalert';
+import Badge from 'react-bootstrap/Badge';
 
 class App extends Component {
   constructor(props) {
@@ -19,12 +21,12 @@ class App extends Component {
         description: "",
         condition: "",
         price: 0.00,
-        linkToBuy: "",
-        isInStock: false,
+        link_to_buy: "",
+        is_in_stock: false,
       },
     };
   }
-
+  
   componentDidMount() {
     this.refreshList();
   }
@@ -63,7 +65,7 @@ class App extends Component {
   };
 
   createItem = () => {
-    const item = { title: "", authors: "", isbn: "", description: "", condition: "", price: "", linkToBuy: "", isInStock: false };
+    const item = { title: "", authors: "", isbn: "", description: "", condition: "", price: "", link_to_buy: "", is_in_stock: false };
 
     this.setState({ activeItem: item, modal: !this.state.modal });
   };
@@ -79,6 +81,43 @@ class App extends Component {
 
     return this.setState({ viewisInStock: false });
   };
+
+  displayPrice = (item) => {
+    var priceString = '';
+    var badgeType = 'info';
+    if (item.condition.length > 0) {
+      priceString += item.condition + ': ';
+      if (item.condition === 'Good') {
+        badgeType = 'success';
+      }
+      else if (item.condition === 'Poor') {
+        badgeType = 'danger';
+      }
+      else {
+        badgeType = 'warning';
+      }
+    }
+    if (item.price === 0) {
+      badgeType = 'secondary';
+      priceString += 'Free';
+    }
+    else {
+      priceString += '$' + item.price.toFixed(2).toString();
+    }    
+    return (
+      <Badge pill bg={badgeType}>{priceString}</Badge>
+    );
+  }
+
+  openExternalLink = (item) => {
+    if (item.link_to_buy.length > 0) {
+      var win = window.open(item.link_to_buy, '_blank');
+      win.focus();
+    }
+    else {
+      swal('There is no link associated with this book yet :(')  
+    }
+  }
 
   renderTabList = () => {
     return (
@@ -102,7 +141,7 @@ class App extends Component {
   renderItems = () => {
     const { viewisInStock } = this.state;
     const newItems = this.state.bookList.filter(
-      (item) => item.isInStock === viewisInStock
+      (item) => item.is_in_stock === viewisInStock
     );
 
     return newItems.map((item) => (
@@ -117,14 +156,24 @@ class App extends Component {
           title={item.description}
         >
           {item.title} - {item.authors}
+          <br/>
+          {this.displayPrice(item)}{' '}          
         </span>
         <span>
+          <button
+            className="btn btn-success mr-2"
+            onClick={() => this.openExternalLink(item)}
+          >
+            Buy
+          </button>          
+          &nbsp; 
           <button
             className="btn btn-secondary mr-2"
             onClick={() => this.editItem(item)}
           >
             Edit
           </button>
+          &nbsp;
           <button
             className="btn btn-danger"
             onClick={() => this.handleDelete(item)}
