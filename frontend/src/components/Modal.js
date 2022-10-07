@@ -62,14 +62,14 @@ export default class CustomModal extends Component {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="book-ispn">ISPN</Label>
+              <Label for="book-isbn">ISBN</Label>
               <Input
                 type="text"
-                id="book-ispn"
-                name="ispn"
-                value={this.state.activeItem.ispn}
+                id="book-isbn"
+                name="isbn"
+                value={this.state.activeItem.isbn}
                 onChange={this.handleChange}
-                placeholder="Enter book ISPN"
+                placeholder="Enter book ISBN"
               />
             </FormGroup>
             <FormGroup>

@@ -15,7 +15,7 @@ class App extends Component {
       activeItem: {
         title: "",
         authors: "",
-        ispn: "",
+        isbn: "",
         description: "",
         condition: "",
         price: 0.00,
@@ -63,7 +63,7 @@ class App extends Component {
   };
 
   createItem = () => {
-    const item = { title: "", authors: "", ispn: "", description: "", condition: "", price: "", linkToBuy: "", isInStock: false };
+    const item = { title: "", authors: "", isbn: "", description: "", condition: "", price: "", linkToBuy: "", isInStock: false };
 
     this.setState({ activeItem: item, modal: !this.state.modal });
   };
