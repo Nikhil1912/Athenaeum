@@ -1,18 +1,23 @@
+"""
+Views
+"""
 from django.shortcuts import render, HttpResponse
 from rest_framework import viewsets
+from django.contrib.auth.hashers import make_password, check_password
 from .serializers import BookSerializer
 from .models import Book, Login
-from django.contrib.auth.hashers import make_password, check_password
 
 # Create your views here.
 
 class BookView(viewsets.ModelViewSet):
+    """ View for the Book model """
     serializer_class = BookSerializer
     queryset = Book.objects.all()
 
 
 # Login and Encryption instructions from https://pythonguides.com/encrypt-and-decrypt-password-in-django/
 def login(request):
+    """ Login """
     if request.method == 'POST':
         email = request.POST['email']
         encryptedpassword=make_password(request.POST['password'])
@@ -23,5 +28,4 @@ def login(request):
 
         data.save()
         return HttpResponse('Done')
-    else:
-        return render(request, 'index.html')
+    return render(request, 'index.html')
