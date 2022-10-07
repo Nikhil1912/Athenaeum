@@ -2,6 +2,7 @@
 [![DOI](https://zenodo.org/badge/544187336.svg)](https://zenodo.org/badge/latestdoi/544187336)
 <a href="https://github.com/Nikhil1912/Athenaeum/main/LICENSE.md"><img src="https://img.shields.io/github/license/Nikhil1912/CSC510-HW_37?style=plastic" /></a>
 [![Unit tests](https://github.com/Nikhil1912/Athenaeum/actions/workflows/backend-tests.yml/badge.svg)](https://github.com/Nikhil1912/Athenaeum/actions/workflows/backend-tests.yml)
+[![codecov](https://codecov.io/gh/Nikhil1912/Athenaeum/branch/main/graph/badge.svg?token=5UIM8QKSNQ)](https://codecov.io/gh/Nikhil1912/Athenaeum)
 
 ## Motivation
 Athenaeum is an application dedicated to connecting you with the books you're searching for. Our goal: to search the web and find you the books you seek at a reputable distributor and a good price. Using Athenaeum, you can simplify your journey and minimize your costs as you find the resources you need for class.
