@@ -4,7 +4,7 @@ from .models import Login
 
 
 class BookAdmin(admin.ModelAdmin):
-    list_display = ('title', 'authors', 'description', 'isInStock')
+    list_display = ('title', 'authors', 'description', 'is_in_stock')
 
 
 # Register your models here.

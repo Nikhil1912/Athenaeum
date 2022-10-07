@@ -10,8 +10,8 @@ class Book(models.Model):
     description = models.TextField(default='', blank=True)
     condition = models.TextField(default='', blank=True)
     price = models.FloatField(default = 0.00, blank=True)
-    linkToBuy = models.URLField(blank=True)
-    isInStock = models.BooleanField(default=False)
+    link_to_buy = models.URLField(blank=True)
+    is_in_stock = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
