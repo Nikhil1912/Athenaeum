@@ -4,7 +4,7 @@ Model serializers
 from rest_framework import serializers
 from .models import Book
 
-class BookSerializer(serializers.ModelSerializer):
+class BookSerializer(serializers.ModelSerializer):  #A model serializer for Book class that contains all the associated variables 
     """ Serializer for Book model """
     class Meta:
         model = Book
