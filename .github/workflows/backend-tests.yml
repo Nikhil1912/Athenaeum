@@ -38,9 +38,11 @@ jobs:
       run: |
         coverage run manage.py test
     - name: Display coverage report
+      working-directory: ./backend
       run: |
         coverage report
     - name: Get the xml output for coverage
+      working-directory: ./backend
       run: |
         coverage xml
     - name: Upload coverage to Codecov
