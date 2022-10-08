@@ -6,6 +6,8 @@ from django.db import models
 
 # Create your models here.
 
+#Use this as the parent class for handling all the metadata of books
+
 class Book(models.Model):
     """ Book model """
     title = models.CharField(max_length=120)
