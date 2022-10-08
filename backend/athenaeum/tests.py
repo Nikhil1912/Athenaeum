@@ -4,6 +4,7 @@ Backend unit tests
 from django.test import TestCase
 from .models import Book
 
+# Use this class to test all the attributes of book
 class BookTestCase(TestCase):
     """ Unit tests for book """
     def setUp(self):
