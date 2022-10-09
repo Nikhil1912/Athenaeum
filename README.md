@@ -1,6 +1,8 @@
 # Athenaeum
 [![DOI](https://zenodo.org/badge/544187336.svg)](https://zenodo.org/badge/latestdoi/544187336)
 <a href="https://github.com/Nikhil1912/Athenaeum/main/LICENSE.md"><img src="https://img.shields.io/github/license/Nikhil1912/CSC510-HW_37?style=plastic" /></a>
+![GitHub issues](https://img.shields.io/github/issues/Nikhil1912/Athenaeum)
+![Repo Size](https://img.shields.io/github/repo-size/Nikhil1912/Athenaeum?color=brightgreen)
 [![Unit tests](https://github.com/Nikhil1912/Athenaeum/actions/workflows/backend-tests.yml/badge.svg)](https://github.com/Nikhil1912/Athenaeum/actions/workflows/backend-tests.yml)
 [![codecov](https://codecov.io/gh/Nikhil1912/Athenaeum/branch/main/graph/badge.svg?token=5UIM8QKSNQ)](https://codecov.io/gh/Nikhil1912/Athenaeum)
 
