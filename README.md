@@ -12,7 +12,7 @@ Athenaeum is an application dedicated to connecting you with the books you're se
 ## Current Scope and Future Work
 At present, you can add, edit, or delete a book from your local machine. If the book has a link to purchase, the "Buy" button will direct you to the appropriate page. If you search for a book that exists in our database, it will direct you to the appropriate Wikipedia link for that book. 
 
-Our web scraper is currently in progress, but we intend to integrate it with our current page to allow for a more optimized searching experience that also presents pricing. We also intend to create a "Buy/Sell" user forum, as well as a login page.
+Our web scraper is currently in progress (see [`\workInProgress`](https://github.com/Nikhil1912/Athenaeum/tree/main/workInProgress) for what we have so far), but we intend to integrate it with our current page to allow for a more optimized searching experience that also presents pricing. We also intend to create a "Buy/Sell" user forum, as well as a functional login page.
 
 ## Running Athenaeum
 Currently, to get everything up and running:
@@ -50,6 +50,8 @@ Currently, to get everything up and running:
   * Press "Delete"
 * Editing a book
   * Press "Edit"
+* Buying a book
+  * If the book has a "Buy" button, use that
    
 ## Governance and Contributors
 As an open-source project, we declare our governance model to be a "do-ocracy"; for insight into what that means, checkout [this](https://www.redhat.com/en/blog/understanding-open-source-governance-models) link from Red Hat. 
@@ -70,3 +72,5 @@ For a list of all dependencies, check out our [dependencies graph](https://githu
 
 ## Funding
 This project is not funded and probably never will be.
+
+<img width="665" alt="Screen Shot 2022-10-09 at 7 03 11 PM" src="https://user-images.githubusercontent.com/112109564/194783687-8d2f9dda-ae5c-45d6-a31e-e2318652b159.png">
