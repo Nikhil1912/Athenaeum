@@ -11,6 +11,7 @@ import {
   Label,
 } from "reactstrap";
 
+//Use this class for additional components
 export default class CustomModal extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +19,7 @@ export default class CustomModal extends Component {
       activeItem: this.props.activeItem,
     };
   }
-
+//Used to change state of an existing record in the backend
   handleChange = (e) => {
     let { name, value } = e.target;
 

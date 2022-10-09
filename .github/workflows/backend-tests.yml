@@ -31,3 +31,21 @@ jobs:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
       run: |
         python manage.py test
+    - name: Run code coverage
+      working-directory: ./backend
+      env:
+        SECRET_KEY: ${{ secrets.SECRET_KEY }}
+      run: |
+        coverage run manage.py test
+    - name: Display coverage report
+      working-directory: ./backend
+      run: |
+        coverage report
+    - name: Get the xml output for coverage
+      working-directory: ./backend
+      run: |
+        coverage xml
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        files: ./backend/coverage.xml 
