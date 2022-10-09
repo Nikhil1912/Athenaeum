@@ -28,11 +28,11 @@ class BookTestCase(TestCase):
         field_label = test_book._meta.get_field('authors').verbose_name
         self.assertEqual(field_label, 'authors')
 
-    def test_book_ispn_label(self):
+    def test_book_isbn_label(self):
         """ Testing book ISBN label """
         test_book = Book.objects.get(id=1)
-        field_label = test_book._meta.get_field('ispn').verbose_name
-        self.assertEqual(field_label, 'ispn')
+        field_label = test_book._meta.get_field('isbn').verbose_name
+        self.assertEqual(field_label, 'isbn')
 
     def test_book_description_label(self):
         """ Testing book description label """
