@@ -1,7 +1,6 @@
 # Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. 
+When contributing to this repository, please first use our ticketing system and send an email of the issue to athenaeum_csc510@outlook.com. 
 
 Please note we have a code of conduct, and please follow it in all your interactions with the project.
 
