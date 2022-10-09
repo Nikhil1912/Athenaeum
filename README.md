@@ -34,3 +34,10 @@ Currently, to get everything up and running:
    * Run `npm start`
    * Navigate to http://localhost:3000
    * To leave, hit CTRL+C and then Y
+   
+## Contributors
+* M M Abid Naziri
+* Nikhil Mehra
+* Bella Samuelsson
+* Parth Katlana
+* Heidi Reichert
