@@ -17,7 +17,7 @@ class App extends Component {  // Parent class for all of the Book data
       activeItem: {
         title: "",
         authors: "",
-        ispn: "",
+        isbn: "",
         description: "",
         condition: "",
         price: 0.00,
@@ -65,7 +65,7 @@ class App extends Component {  // Parent class for all of the Book data
   };
 
   createItem = () => {     //Creates a new record
-    const item = { title: "", authors: "", ispn: "", description: "", condition: "", price: "", link_to_buy: "", is_in_stock: false };
+    const item = { title: "", authors: "", isbn: "", description: "", condition: "", price: "", link_to_buy: "", is_in_stock: false };
 
     this.setState({ activeItem: item, modal: !this.state.modal });
   };
