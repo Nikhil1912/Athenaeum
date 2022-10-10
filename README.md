@@ -74,3 +74,6 @@ For a list of all dependencies, check out our [dependencies graph](https://githu
 This project is not funded and probably never will be.
 
 <img width="665" alt="Screen Shot 2022-10-09 at 7 03 11 PM" src="https://user-images.githubusercontent.com/112109564/194783687-8d2f9dda-ae5c-45d6-a31e-e2318652b159.png">
+
+
+![Athenaeum](https://user-images.githubusercontent.com/25509428/194795162-0f9904ef-735f-4875-9d76-84cd3074994a.png)
